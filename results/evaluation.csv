@@ -1,0 +1,17 @@
+claim_id,crew_decision,crew_amount,receipt_total_read,non_reimbursable_found,seconds,model,reasons,expected_decision,expected_amount,reason,decision_correct,amount_correct
+C001,APPROVE,1850.0,1850.0,0.0,73.8,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,1850,"Within limit (2 x 1,000), receipt matches",True,True
+C002,APPROVE,1320.0,1320.0,0.0,72.5,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,1320,"Within daily limit of 1,500",True,True
+C003,FLAG,8000.0,9600.0,0.0,73.6,gemini/gemini-flash-lite-latest,"Eligible INR 9,600 is above the Hotel Tier 1 limit of INR 8,000 (2 x 4,000 per night, grade G1).",FLAG,8000,"Hotel above Tier 1 G1 limit (2 x 4,000)",True,True
+C004,FLAG,4400.0,5600.0,1200.0,75.3,gemini/gemini-flash-lite-latest,"INR 1,200 of non-reimbursable items removed. | Client meal on a Saturday; business purpose needs confirmation.",FLAG,4400,"Beer of 1,200 removed (alcohol), eligible 4,400 within 3 x 1,500; also a Saturday client meal",True,True
+C005,REJECT,0.0,0.0,0.0,73.9,gemini/gemini-flash-lite-latest,No receipt for a claim of INR 780 (above 500).,REJECT,0,No receipt for a claim above 500,True,True
+C006,APPROVE,18400.0,18400.0,0.0,72.9,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,18400,Economy airfare within G3 limit,True,True
+C007,REJECT,0.0,2640.0,0.0,13.5,gemini/gemini-flash-lite-latest,"R5 Duplicate: Same employee, vendor, date and amount as claim H101.",REJECT,0,Duplicate of reimbursed claim H101,True,True
+C008,REJECT,0.0,1450.0,0.0,79.0,gemini/gemini-flash-lite-latest,Submitted 46 days after the expense (limit 30).,REJECT,0,Submitted 46 days after expense (limit 30),True,True
+C009,REJECT,0.0,2000.0,2000.0,32.1,gemini/gemini-flash-lite-latest,The whole claim is for non-reimbursable items.,REJECT,0,Traffic fine is non-reimbursable,True,True
+C010,FLAG,2000.0,2000.0,0.0,13.5,gemini/gemini-flash-lite-latest,Client meal on a Sunday; business purpose needs confirmation.,FLAG,2000,Client meal on a Sunday,True,True
+C011,FLAG,1900.0,1900.0,0.0,41.9,gemini/gemini-flash-lite-latest,"R7 Split bill: With C012 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000.",FLAG,1900,"Split bill: two same-vendor claims on one day total 3,750, above 2,000",True,True
+C012,FLAG,1850.0,1850.0,0.0,37.5,gemini/gemini-flash-lite-latest,"R7 Split bill: With C011 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000.",FLAG,1850,"Split bill with C011 (3,750 together, above 2,000)",True,True
+C013,APPROVE,6500.0,6500.0,0.0,41.8,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,6500,"Within Tier 2 G3 hotel limit of 7,000",True,True
+C014,APPROVE,999.0,999.0,0.0,41.9,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,999,"Within monthly limit of 1,000",True,True
+C015,FLAG,950.0,950.0,0.0,45.3,gemini/gemini-flash-lite-latest,"Claimed INR 1,200 but the receipt shows INR 950.",FLAG,950,"Claimed 1,200 but receipt shows 950",True,True
+C016,APPROVE,9200.0,9200.0,0.0,40.6,gemini/gemini-flash-lite-latest,All policy checks passed,APPROVE,9200,"Within limit (4 x 2,500)",True,True

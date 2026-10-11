@@ -1,0 +1,609 @@
+{
+ "C001": {
+  "claim_id": "C001",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 73.8,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Spice Route Restaurant",
+   "receipt_date": "2026-09-24",
+   "receipt_total": 1850.0,
+   "non_reimbursable_items": [],
+   "notes": "All items are standard food and beverage items; no non-reimbursable items such as alcohol found."
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 2000.0,
+   "eligible_amount": 1850.0,
+   "recommended_amount": 1850.0,
+   "summary": "Claim C001 complies with all expense policy rules and is fully recommended for approval with no rule triggers."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks for claim C001 were completed successfully. No rule triggers were identified, and the risk level is assessed as Low."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 1850.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Hello! Your expense claim C001 has been reviewed and successfully approved for the amount of 1850.00. The reimbursement will be processed shortly in accordance with our standard payment schedule. Thank you for submitting all the required documentation."
+  }
+ },
+ "C002": {
+  "claim_id": "C002",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 72.5,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "QuickRide Cabs",
+   "receipt_date": "2026-09-30",
+   "receipt_total": 1320.0,
+   "non_reimbursable_items": [],
+   "notes": "All trips appear to be legitimate local travel with no non-reimbursable items present."
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 1500.0,
+   "eligible_amount": 1320.0,
+   "recommended_amount": 1320.0,
+   "summary": "Claim C002 for local travel is within policy limits and matches the receipt. No rules were triggered, and the claim is fully approved."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud check completed for claim C002 with receipt date 2026-09-30 and total 1320. No rule triggers were found. Risk level is Low."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 1320.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Hello! Your reimbursement claim C002 has been fully reviewed and approved for the amount of 1320.00 as it complies with all company travel policies. The payment will be processed in the upcoming payroll cycle."
+  }
+ },
+ "C003": {
+  "claim_id": "C003",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 73.6,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Hotel Lotus Residency",
+   "receipt_date": "2026-09-15",
+   "receipt_total": 9600.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [
+    {
+     "rule": "R4 Limit",
+     "effect": "FLAG",
+     "detail": "Eligible INR 9,600 is above the Hotel Tier 1 limit of INR 8,000 (2 x 4,000 per night, grade G1)."
+    }
+   ],
+   "max_allowed_amount": 8000.0,
+   "eligible_amount": 9600.0,
+   "recommended_amount": 8000.0,
+   "summary": "Claim C003 is flagged for manager review because the claimed amount exceeds the Tier 1 hotel limit for a G1 employee. The recommended reimbursement is capped at the maximum allowed amount of INR 8,000."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks completed for claim C003. No rule triggers were identified, and the risk level is assessed as Low."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 8000.0,
+   "reasons": [
+    "Eligible INR 9,600 is above the Hotel Tier 1 limit of INR 8,000 (2 x 4,000 per night, grade G1)."
+   ],
+   "employee_message": "Hello! Your reimbursement claim C003 has been reviewed and flagged because the claimed amount exceeds the standard Hotel Tier 1 limit for your grade. As per company policy, your reimbursement has been adjusted and approved up to the maximum allowed amount of INR 8,000. Thank you for your understanding!"
+  }
+ },
+ "C004": {
+  "claim_id": "C004",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 75.3,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "The Grill House",
+   "receipt_date": "2026-09-26",
+   "receipt_total": 5600.0,
+   "non_reimbursable_items": [
+    {
+     "item": "Kingfisher Beer x4",
+     "amount": 1200.0,
+     "reason": "Alcohol is a non-reimbursable item."
+    }
+   ],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [
+    {
+     "rule": "R3 Non-reimbursable",
+     "effect": "FLAG",
+     "detail": "INR 1,200 of non-reimbursable items removed."
+    }
+   ],
+   "max_allowed_amount": 4500.0,
+   "eligible_amount": 4400.0,
+   "recommended_amount": 4400.0,
+   "summary": "Claim C004 has been flagged due to partial non-reimbursable items (alcohol totaling INR 1,200). The eligible and recommended amount is adjusted to INR 4,400."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R7 Weekend client meal",
+     "effect": "FLAG",
+     "detail": "Client meal on a Saturday; business purpose needs confirmation."
+    }
+   ],
+   "risk_level": "Medium",
+   "summary": "Fraud check completed for claim C004. One FLAG rule trigger was identified regarding a weekend client meal on a Saturday, requiring business purpose confirmation. No REJECT triggers were found, resulting in a Medium risk level."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 4400.0,
+   "reasons": [
+    "INR 1,200 of non-reimbursable items removed.",
+    "Client meal on a Saturday; business purpose needs confirmation."
+   ],
+   "employee_message": "Hello, your claim C004 has been flagged for review due to non-reimbursable alcohol items and a weekend meal requiring business purpose confirmation. We have adjusted the recommended reimbursement to INR 4,400 pending this verification. Thank you for your patience."
+  }
+ },
+ "C005": {
+  "claim_id": "C005",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 73.9,
+  "receipt": {
+   "receipt_present": false,
+   "vendor": "",
+   "receipt_date": "",
+   "receipt_total": 0.0,
+   "non_reimbursable_items": [],
+   "notes": "NO RECEIPT ATTACHED"
+  },
+  "policy": {
+   "rule_triggers": [
+    {
+     "rule": "R1 Receipts",
+     "effect": "REJECT",
+     "detail": "No receipt for a claim of INR 780 (above 500)."
+    }
+   ],
+   "max_allowed_amount": 2000.0,
+   "eligible_amount": 780.0,
+   "recommended_amount": 780.0,
+   "summary": "Claim C005 is rejected under rule R1 because no receipt was attached for a claim exceeding INR 500."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks completed for claim C005. No rule triggers were returned by the fraud detection tool. Risk level assessed as Low."
+  },
+  "decision": {
+   "decision": "REJECT",
+   "recommended_amount": 0.0,
+   "reasons": [
+    "No receipt for a claim of INR 780 (above 500)."
+   ],
+   "employee_message": "Hello. Your reimbursement claim C005 could not be approved at this time because no receipt was attached for the claim exceeding INR 500. Please submit a valid receipt so we can process your request."
+  }
+ },
+ "C006": {
+  "claim_id": "C006",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 72.9,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "SkyWays Airlines",
+   "receipt_date": "2026-09-22",
+   "receipt_total": 18400.0,
+   "non_reimbursable_items": [],
+   "notes": "E-ticket for flight from DEL to BOM for passenger Rohan Malhotra."
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 20000.0,
+   "eligible_amount": 18400.0,
+   "recommended_amount": 18400.0,
+   "summary": "Claim C006 for Airfare is fully compliant with company policy, falling well within the G3 category limit of INR 20,000. No rule triggers were identified, and the full claimed amount of INR 18,400 is recommended for approval."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud check completed for claim C006 with receipt date 2026-09-22 and total 18400. No rule triggers were identified, resulting in a Low risk level."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 18400.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Hello Rohan, your claim C006 for the flight from DEL to BOM has been successfully approved. The full amount of INR 18,400 is compliant with company policy and has been processed for reimbursement. Thank you for submitting all the required details."
+  }
+ },
+ "C007": {
+  "claim_id": "C007",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 13.5,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Spice Route Restaurant",
+   "receipt_date": "2026-09-18",
+   "receipt_total": 2640.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 3000.0,
+   "eligible_amount": 2640.0,
+   "recommended_amount": 2640.0,
+   "summary": "Claim C007 is within policy limits and submitted on time with no rule violations. The recommended reimbursement amount is INR 2,640.0."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R5 Duplicate",
+     "effect": "REJECT",
+     "detail": "Same employee, vendor, date and amount as claim H101."
+    }
+   ],
+   "risk_level": "High",
+   "summary": "Fraud check on claim C007 triggered a REJECT due to a duplicate submission matching claim H101."
+  },
+  "decision": {
+   "decision": "REJECT",
+   "recommended_amount": 0.0,
+   "reasons": [
+    "R5 Duplicate: Same employee, vendor, date and amount as claim H101."
+   ],
+   "employee_message": "Hello, thank you for submitting your reimbursement claim C007. Unfortunately, this claim has been rejected because our system detected it as a duplicate of a previously submitted claim (H101). Please reach out to finance if you believe this is an error."
+  }
+ },
+ "C008": {
+  "claim_id": "C008",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 79.0,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "QuickRide Cabs",
+   "receipt_date": "2026-08-20",
+   "receipt_total": 1450.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [
+    {
+     "rule": "R2 Timeliness",
+     "effect": "REJECT",
+     "detail": "Submitted 46 days after the expense (limit 30)."
+    }
+   ],
+   "max_allowed_amount": 1500.0,
+   "eligible_amount": 1450.0,
+   "recommended_amount": 1450.0,
+   "summary": "Claim C008 is rejected due to violating the R2 Timeliness policy rule, as it was submitted 46 days after the expense date."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "No fraud rules were triggered for claim C008. The receipt date and total were verified, and the risk level is Low."
+  },
+  "decision": {
+   "decision": "REJECT",
+   "recommended_amount": 0.0,
+   "reasons": [
+    "Submitted 46 days after the expense (limit 30)."
+   ],
+   "employee_message": "Unfortunately, your reimbursement claim C008 has been rejected because it was submitted 46 days after the expense date, exceeding our 30-day policy limit. Please ensure future expenses are submitted within the allowable timeframe for successful processing."
+  }
+ },
+ "C009": {
+  "claim_id": "C009",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 32.1,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Mumbai Traffic Police",
+   "receipt_date": "2026-10-01",
+   "receipt_total": 2000.0,
+   "non_reimbursable_items": [
+    {
+     "item": "Signal jumping Fine",
+     "amount": 2000.0,
+     "reason": "Traffic or parking fines are not reimbursable"
+    }
+   ],
+   "notes": "E-Challan for traffic violation (Signal jumping)"
+  },
+  "policy": {
+   "rule_triggers": [
+    {
+     "rule": "R3 Non-reimbursable",
+     "effect": "REJECT",
+     "detail": "The whole claim is for non-reimbursable items."
+    }
+   ],
+   "max_allowed_amount": 1500.0,
+   "eligible_amount": 0.0,
+   "recommended_amount": 0.0,
+   "summary": "Claim C009 was rejected because it consists entirely of non-reimbursable traffic fines."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks completed for claim C009 with receipt date 2026-10-01 and receipt total 2000. No rule triggers were identified, resulting in a Low risk level."
+  },
+  "decision": {
+   "decision": "REJECT",
+   "recommended_amount": 0.0,
+   "reasons": [
+    "The whole claim is for non-reimbursable items."
+   ],
+   "employee_message": "Hello. Unfortunately, claim C009 has been rejected because it consists entirely of non-reimbursable traffic fines. Please let me know if you have any questions regarding our expense policy."
+  }
+ },
+ "C010": {
+  "claim_id": "C010",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 13.5,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Coastal Kitchen",
+   "receipt_date": "2026-10-04",
+   "receipt_total": 2000.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 2000.0,
+   "eligible_amount": 2000.0,
+   "recommended_amount": 2000.0,
+   "summary": "Claim C010 for Client Meals has no rule triggers and is fully approved for the recommended amount of INR 2,000."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R7 Weekend client meal",
+     "effect": "FLAG",
+     "detail": "Client meal on a Sunday; business purpose needs confirmation."
+    }
+   ],
+   "risk_level": "Medium",
+   "summary": "Fraud check completed for claim C010. One FLAG trigger was returned regarding a weekend client meal on Sunday, resulting in a Medium risk level."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 2000.0,
+   "reasons": [
+    "Client meal on a Sunday; business purpose needs confirmation."
+   ],
+   "employee_message": "Hello! Your reimbursement claim C010 has been flagged for further review because it involves a weekend client meal on Sunday. We just need a quick confirmation of the business purpose before we can finalize the approval."
+  }
+ },
+ "C011": {
+  "claim_id": "C011",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 41.9,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "OfficeMart Supplies",
+   "receipt_date": "2026-10-07",
+   "receipt_total": 1900.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 2000.0,
+   "eligible_amount": 1900.0,
+   "recommended_amount": 1900.0,
+   "summary": "Claim C011 for Office Supplies is within the limit, submitted on time with a valid receipt, and has no rule violations. It is approved for the claimed amount of 1,900 INR."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R7 Split bill",
+     "effect": "FLAG",
+     "detail": "With C012 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000."
+    }
+   ],
+   "risk_level": "Medium",
+   "summary": "Claim C011 triggered a FLAG for R7 Split bill as the same-day total with claim C012 from OfficeMart Supplies exceeds the INR 2,000 limit. The risk level is Medium."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 1900.0,
+   "reasons": [
+    "R7 Split bill: With C012 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000."
+   ],
+   "employee_message": "Hello! Your reimbursement claim C011 has been flagged for review due to a potential split bill pattern with claim C012 on the same day. We are currently verifying these details to ensure full policy compliance and will process your reimbursement shortly."
+  }
+ },
+ "C012": {
+  "claim_id": "C012",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 37.5,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "OfficeMart Supplies",
+   "receipt_date": "2026-10-07",
+   "receipt_total": 1850.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 2000.0,
+   "eligible_amount": 1850.0,
+   "recommended_amount": 1850.0,
+   "summary": "Claim C012 for Office Supplies by a G2 employee is within the policy limit, submitted on time, and meets all receipt and policy requirements, resulting in full approval for the claimed amount of INR 1,850."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R7 Split bill",
+     "effect": "FLAG",
+     "detail": "With C011 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000."
+    }
+   ],
+   "risk_level": "Medium",
+   "summary": "Fraud check for claim C012 triggered the R7 Split bill rule with a FLAG effect, resulting in a Medium risk level."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 1850.0,
+   "reasons": [
+    "R7 Split bill: With C011 the same-day total from OfficeMart Supplies is INR 3,750, above the limit of INR 2,000."
+   ],
+   "employee_message": "Hello! Your reimbursement claim C012 has been flagged for further review because it appears to be part of a split bill with claim C011 on the same day at OfficeMart Supplies. We are processing this as quickly as possible and will reach out if we need any additional details."
+  }
+ },
+ "C013": {
+  "claim_id": "C013",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 41.8,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Hotel Ganga View",
+   "receipt_date": "2026-09-28",
+   "receipt_total": 6500.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 7000.0,
+   "eligible_amount": 6500.0,
+   "recommended_amount": 6500.0,
+   "summary": "Claim C013 is within the policy limit for Tier 2 hotels for a G3 employee and was submitted on time with a valid receipt, so it is approved with no rule triggers."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks for claim C013 completed with no rule triggers. Risk level is Low."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 6500.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Your reimbursement claim C013 has been fully approved for the amount of 6,500.00 as it complies with all company policies and passed all verification checks. The funds will be processed in the upcoming payment cycle. Thank you for submitting all the required documentation promptly."
+  }
+ },
+ "C014": {
+  "claim_id": "C014",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 41.9,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "AirLink Broadband",
+   "receipt_date": "",
+   "receipt_total": 999.0,
+   "non_reimbursable_items": [],
+   "notes": "No date specified on the receipt text."
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 1000.0,
+   "eligible_amount": 999.0,
+   "recommended_amount": 999.0,
+   "summary": "Claim C014 for Internet and Mobile is within the policy limit and meets all requirements with no rule triggers."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks were performed for claim C014 with a receipt total of 999 and no specified receipt date. No rule triggers were returned, resulting in a Low risk level."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 999.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Hello! Your reimbursement claim C014 has been successfully reviewed and approved for the amount of $999.00. The funds will be included in your next payroll cycle. Thank you for submitting all the required details."
+  }
+ },
+ "C015": {
+  "claim_id": "C015",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 45.3,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "QuickRide Cabs",
+   "receipt_date": "2026-10-02",
+   "receipt_total": 950.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 1000.0,
+   "eligible_amount": 950.0,
+   "recommended_amount": 950.0,
+   "summary": "Claim C015 for local travel is approved for the receipt amount of INR 950.0 as it falls within the policy limits and complies with all rules."
+  },
+  "fraud": {
+   "rule_triggers": [
+    {
+     "rule": "R6 Receipt match",
+     "effect": "FLAG",
+     "detail": "Claimed INR 1,200 but the receipt shows INR 950."
+    }
+   ],
+   "risk_level": "Medium",
+   "summary": "Claim C015 was checked for fraud patterns. One flag was triggered regarding a receipt mismatch where the claimed amount is INR 1,200 and the receipt total is INR 950."
+  },
+  "decision": {
+   "decision": "FLAG",
+   "recommended_amount": 950.0,
+   "reasons": [
+    "Claimed INR 1,200 but the receipt shows INR 950."
+   ],
+   "employee_message": "Hello, we have reviewed your claim C015 for QuickRide Cabs. It has been flagged because the amount you claimed (INR 1,200) differs from the receipt total (INR 950). We have adjusted the recommended reimbursement to match your actual receipt amount of INR 950, which is now proceeding for approval."
+  }
+ },
+ "C016": {
+  "claim_id": "C016",
+  "model": "gemini/gemini-flash-lite-latest",
+  "seconds": 40.6,
+  "receipt": {
+   "receipt_present": true,
+   "vendor": "Saffron Terrace",
+   "receipt_date": "2026-10-06",
+   "receipt_total": 9200.0,
+   "non_reimbursable_items": [],
+   "notes": ""
+  },
+  "policy": {
+   "rule_triggers": [],
+   "max_allowed_amount": 10000.0,
+   "eligible_amount": 9200.0,
+   "recommended_amount": 9200.0,
+   "summary": "Claim C016 for Client Meals has no triggered rules and is fully eligible within the allowed limit."
+  },
+  "fraud": {
+   "rule_triggers": [],
+   "risk_level": "Low",
+   "summary": "Fraud checks completed for claim C016 with no rule triggers found. The risk level is Low."
+  },
+  "decision": {
+   "decision": "APPROVE",
+   "recommended_amount": 9200.0,
+   "reasons": [
+    "All policy checks passed"
+   ],
+   "employee_message": "Your reimbursement claim C016 has been fully approved for the amount of 9200.00. The payment will be processed in the upcoming payroll cycle. Thank you for submitting all the required documentation."
+  }
+ }
+}

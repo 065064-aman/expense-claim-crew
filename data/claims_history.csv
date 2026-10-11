@@ -1,0 +1,5 @@
+claim_id,employee_id,expense_date,category,vendor,amount,status
+H101,E07,2026-09-18,Client Meals,Spice Route Restaurant,2640,Reimbursed
+H102,E02,2026-09-10,Local Travel,QuickRide Cabs,1180,Reimbursed
+H103,E06,2026-09-05,Airfare,SkyWays Airlines,17200,Reimbursed
+H104,E01,2026-08-28,Office Supplies,PaperPoint Stationers,640,Reimbursed

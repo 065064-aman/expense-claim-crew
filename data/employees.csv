@@ -1,0 +1,11 @@
+employee_id,name,grade,department,manager
+E01,Riya Mehta,G1,Analytics,Arjun Rao
+E02,Karan Sethi,G2,Sales,Neha Kapoor
+E03,Priya Nair,G1,Consulting,Arjun Rao
+E04,Vikram Joshi,G2,Operations,Neha Kapoor
+E05,Ananya Das,G1,Finance,Sanjay Iyer
+E06,Rohan Malhotra,G3,Sales,Managing Director
+E07,Sneha Kulkarni,G2,Consulting,Sanjay Iyer
+E08,Aditya Verma,G1,Sales,Karan Sethi
+E09,Meera Pillai,G3,Consulting,Managing Director
+E10,Farhan Sheikh,G1,Analytics,Arjun Rao

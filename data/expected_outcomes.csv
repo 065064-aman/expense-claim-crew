@@ -1,0 +1,17 @@
+claim_id,expected_decision,expected_amount,reason
+C001,APPROVE,1850,"Within limit (2 x 1,000), receipt matches"
+C002,APPROVE,1320,"Within daily limit of 1,500"
+C003,FLAG,8000,"Hotel above Tier 1 G1 limit (2 x 4,000)"
+C004,FLAG,4400,"Beer of 1,200 removed (alcohol), eligible 4,400 within 3 x 1,500; also a Saturday client meal"
+C005,REJECT,0,No receipt for a claim above 500
+C006,APPROVE,18400,Economy airfare within G3 limit
+C007,REJECT,0,Duplicate of reimbursed claim H101
+C008,REJECT,0,Submitted 46 days after expense (limit 30)
+C009,REJECT,0,Traffic fine is non-reimbursable
+C010,FLAG,2000,Client meal on a Sunday
+C011,FLAG,1900,"Split bill: two same-vendor claims on one day total 3,750, above 2,000"
+C012,FLAG,1850,"Split bill with C011 (3,750 together, above 2,000)"
+C013,APPROVE,6500,"Within Tier 2 G3 hotel limit of 7,000"
+C014,APPROVE,999,"Within monthly limit of 1,000"
+C015,FLAG,950,"Claimed 1,200 but receipt shows 950"
+C016,APPROVE,9200,"Within limit (4 x 2,500)"

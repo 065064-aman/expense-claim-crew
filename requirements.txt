@@ -1,0 +1,4 @@
+crewai[google-genai]==1.9.3
+streamlit
+pandas
+python-dotenv
